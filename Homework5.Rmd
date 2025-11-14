@@ -6,7 +6,16 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, error = FALSE)
+library(tidyverse)
+library(broom)
+library(readr)
+library(dplyr)
+library(ggfortify)
+library(ggplot2)
+library(dlnm)
+library(scales)
+library(purrr)
 ```
 
 Take the following steps to set up your GitHub repository for the homework (we will work on this as an in-course exercise):
