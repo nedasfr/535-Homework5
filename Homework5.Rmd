@@ -16,6 +16,13 @@ library(ggplot2)
 library(dlnm)
 library(scales)
 library(purrr)
+library(leaflet)
+library(DT)
+library(plotly)
+library(sf)
+library(tigris)
+library(viridis)
+library(maps)
 ```
 
 Take the following steps to set up your GitHub repository for the homework (we will work on this as an in-course exercise):
@@ -50,6 +57,10 @@ Select one of the following two figures to create for the homework:
 Charlotte_data<- homicides%>%
   filter(city == "Charlotte")
 Charlotte_data
+
+
+tracts(state = "NC")
+
 ```
 
 
