@@ -47,10 +47,9 @@ Select one of the following two figures to create for the homework:
 
 
 ```{r}
-Washington_data<- homicides%>%
-  filter(city == "Washington")
-Washington_data
-
+Charlotte_data<- homicides%>%
+  filter(city == "Charlotte")
+Charlotte_data
 ```
 
 
