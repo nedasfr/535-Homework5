@@ -59,7 +59,10 @@ ggplot(aes(date, homicides))+
   annotate("text", Freddie_Gray, 40, label= "Arrest of \nFreddie Gray", color= "cornsilk2", hjust=1)+
   labs(title= "Homicides in Baltimore, MD", x= "Date", y="Monthly homicides")+
   scale_fill_manual(values= c("Summer"="cornsilk3", "Winter"="lightcyan3"), name=NULL)+
-  theme_dark() 
+  theme_dark() +
+  theme(legend.position = "bottom")
+
+
 ```
 
 
