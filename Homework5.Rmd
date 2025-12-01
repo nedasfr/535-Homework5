@@ -58,7 +58,8 @@ ggplot(aes(date, homicides))+
  geom_vline(aes(xintercept= Freddie_Gray), linetype= "dashed", color= "red", linewidth= 1.5)+
   annotate("text", Freddie_Gray, 40, label= "Arrest of \nFreddie Gray", color= "cornsilk2", hjust=1)+
   labs(title= "Homicides in Baltimore, MD", x= "Date", y="Monthly homicides")+
-  scale_fill_manual(values= c("Summer"="cornsilk3", "Winter"="lightcyan3"), name=NULL)
+  scale_fill_manual(values= c("Summer"="cornsilk3", "Winter"="lightcyan3"), name=NULL)+
+  theme_dark() 
 ```
 
 
