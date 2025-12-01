@@ -62,7 +62,7 @@ ggplot(aes(date, homicides))+
   theme_dark() +
   theme(legend.position = "bottom")
 
-
+ggsave("Baltimore.png", width= 10, height= 3)
 ```
 
 
