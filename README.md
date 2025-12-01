@@ -1,0 +1,13 @@
+
+## R Markdown
+
+This is a README file for the baltimore_data, which is created for
+Homework 5 of the 535ERHS class at CSU. This respiratory includes
+Washington Post data on homicides in the US.
+
+The data and the graph shows monthly homicides in Baltimore, with a
+reference added for the date of the arrest of Freddie Gray from November
+through April versus warmer months from May through October.
+
+The Baltimore graph is saved as the Baltimore.png that shows the
+aforementioned data.
