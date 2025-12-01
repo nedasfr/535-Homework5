@@ -25,7 +25,12 @@ homicides<- read.csv("data-homicides-master/homicide-data.csv")
 
   
 ```{r}
+Freddie_Gray<- homicides%>%
+  filter(str_detect(victim_last, "GREY") & str_detect(victim_first, "^FREDDIE"))%>%
+  pull(reported_date)
 
+Freddie_Gray<- ymd(paste(substr(Freddie_Gray, 1, 4), substr(Freddie_Gray,5,6),"01", sep="-"))
+Freddie_Gray
 ```
  
   
@@ -41,23 +46,11 @@ baltimore_data<- homicides%>%
   summarise(homicides=n(), .groups = "drop")
 
 baltimore_data
+
 ```
     
 
-```{r, fig.width= 10, fig.height= 3}
-baltimore_data%>%
-ggplot(aes(date, homicides))+
-  geom_col(aes(fill=season), width= 26)+
-  geom_smooth(color= "royalblue", se= FALSE, method = 'loess', span = 0.12, linewidth= 1.5)+
- geom_vline(aes(xintercept= Freddie_Gray), linetype= "dashed", color= "red", linewidth= 1.5)+
-  annotate("text", Freddie_Gray, 40, label= "Arrest of \nFreddie Gray", color= "cornsilk2", hjust=1)+
-  labs(title= "Homicides in Baltimore, MD", x= "Date", y="Monthly homicides")+
-  scale_fill_manual(values= c("Summer"="cornsilk3", "Winter"="lightcyan3"), name=NULL)+
-  theme_dark()+
-  theme(legend.position = "bottom")
 
-ggsave("Baltimore.png", width= 10, height= 3)
-```
 
 
     
